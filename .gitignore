@@ -1,7 +1,13 @@
-/vendor/
-node_modules/
+/node_modules
+/vendor
+.env
+.env.backup
+docker-compose.override.yml
 npm-debug.log
 yarn-error.log
+/.idea
+/.vscode
+
 
 # Laravel 4 specific
 bootstrap/compiled.php
