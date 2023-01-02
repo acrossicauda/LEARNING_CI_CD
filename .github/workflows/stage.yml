@@ -20,9 +20,10 @@ jobs:
         server-dir: stage/
 
     - name: Install dependencies
-      uses: php-actions/composer@v6
+      uses: "ramsey/composer-install@v2"
       with:
         dev: yes
         path: /project/
+        working-directory: /project/
         args: --profile --ignore-platform-reqs
         php_version: "7.4"
