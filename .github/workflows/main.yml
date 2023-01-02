@@ -14,14 +14,14 @@ jobs:
     - name: Install dependencies
       uses: "ramsey/composer-install@v2"
       with:
-        dev: yes
+        dev: no
         args: --profile --ignore-platform-reqs
         php_version: "7.4"
         
     - name: Update dependencies
-      uses: "ramsey/composer-update@v2"
+      uses: "kawax/composer-update-action@master"
       with:
-        dev: yes
+        dev: no
         args: --profile --ignore-platform-reqs
         php_version: "7.4"
     
