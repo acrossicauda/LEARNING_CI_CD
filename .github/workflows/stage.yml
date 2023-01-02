@@ -19,7 +19,7 @@ jobs:
         php_version: "7.4"
 
     - name: Update dependencies
-      uses: "ramsey/composer-update@v2"
+      uses: "kawax/composer-update-action@master"
       with:
         dev: yes
         args: --profile --ignore-platform-reqs
