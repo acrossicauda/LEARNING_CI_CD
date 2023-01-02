@@ -11,6 +11,9 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
 
+    - name: Copy .env
+      run: php -r "file_exists('.env') || copy('.env.example', '.env');"auth.json
+
     - name: Install dependencies
       uses: "ramsey/composer-install@v2"
       with:
@@ -19,11 +22,9 @@ jobs:
         php_version: "7.4"
 
     - name: Update dependencies
-      uses: php-actions/composer@v6
-      with:
-        command: "composer update"
-        dev: yes
-        php_version: "7.4"
+      run: composer update
+    - name: Directory Permissions
+      run: chmod -R 777 storage bootstrap/cache
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
