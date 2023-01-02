@@ -19,3 +19,9 @@ jobs:
         password: ${{ secrets.ftp_password }}
         server-dir: production/
       
+    - name: Install dependencies
+      uses: "ramsey/composer-install@v2"
+      with:
+        dev: yes
+        args: --profile --ignore-platform-reqs
+        php_version: "7.4"
