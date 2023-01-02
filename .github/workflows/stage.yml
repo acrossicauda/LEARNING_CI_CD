@@ -11,9 +11,6 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
 
-    - name: Copy .env
-      run: php -r "file_exists('.env') || copy('.env.example', '.env');"auth.json
-
     - name: Install dependencies
       uses: "ramsey/composer-install@v2"
       with:
