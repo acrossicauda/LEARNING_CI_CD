@@ -20,8 +20,6 @@ jobs:
         
     - name: Update dependencies
       uses: "kawax/composer-update-action@master"
-      with:
-        args: --profile --ignore-platform-reqs
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
