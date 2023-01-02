@@ -21,9 +21,7 @@ jobs:
     - name: Update dependencies
       uses: "kawax/composer-update-action@master"
       with:
-        dev: no
         args: --profile --ignore-platform-reqs
-        php_version: "7.4"
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
