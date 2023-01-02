@@ -18,6 +18,13 @@ jobs:
         args: --profile --ignore-platform-reqs
         php_version: "7.4"
 
+    - name: Update dependencies
+      uses: "ramsey/composer-update@v2"
+      with:
+        dev: yes
+        args: --profile --ignore-platform-reqs
+        php_version: "7.4"
+
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
